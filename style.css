@@ -1,0 +1,73 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+.header {
+    background-color: #FFFBFB;
+    padding: 1rem 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.add-book {
+    padding: 1rem;
+    border-radius: 1rem;;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    gap: 0.5rem;
+}
+
+.add-book:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+
+
+.header svg {
+    height: 1.5rem;
+}
+
+.main {
+    background-color: #F0EEF1;
+    padding: 1rem 4rem;
+}
+
+.main h2 {
+    display: grid;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    
+}
+
+.main .card {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFFBFB;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    gap: 0.5rem;
+    font-weight: bold;
+}
