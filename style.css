@@ -23,7 +23,9 @@ body, html {
 
 .add-book {
     padding: 1rem;
-    border-radius: 1rem;;
+    border: none;
+    background-color: #FFFBFB;
+    border-radius: 1rem;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -55,7 +57,7 @@ body, html {
 
 .main .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     
 }
@@ -70,4 +72,44 @@ body, html {
     font-size: 1.5rem;
     gap: 0.5rem;
     font-weight: bold;
+}
+
+dialog {
+    background-color: #F0EEF1;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+
+input {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    height: 2rem;
+    font-size: 1.5rem;
+}
+
+form label {
+    font-size: 1.2rem;
+}
+
+form p {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form .checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+form button {
+    background-color: #9FFF9C;
+    width: 80%;
+    height: 3rem;
+    font-size: 1.5rem;
 }

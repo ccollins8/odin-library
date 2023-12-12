@@ -23,8 +23,12 @@ const readStatus = document.querySelector('#readStatus')
 
 const form = document.querySelector('form')
 
-const theHobit = new Book('The Hobit','J.R.R Tolkien',295,true)
-// console.log(theHobit.info())
+const dialog = document.querySelector('dialog')
+const showButton = document.querySelector('.add-book')
+const submitButton = document.querySelector('form button')
+
+const cards = document.querySelector('.cards')
+
 
 function addBookToLibrary() {
     const book = new Book(title.value, author.value, pages.value, readStatus.checked)
@@ -39,13 +43,25 @@ function clearForm() {
 }
 
 function displayLibrary() {
+    let card = document.createElement('.card');
+
     
 }
+
+showButton.addEventListener("click", () => {
+    dialog.showModal();
+})
+
+submitButton.addEventListener("click", () => {
+    dialog.close();
+})
+
 
 
 form.addEventListener('submit', (e) => {
 e.preventDefault();
 addBookToLibrary()
+displayLibrary()
 clearForm();
 });
 

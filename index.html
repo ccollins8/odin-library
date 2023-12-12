@@ -11,10 +11,10 @@
     <div class="container">
         <div class="header">
             <h1>Library</h1>
-            <div class="add-book">
+            <button class="add-book">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus-thick</title><path d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>
                 <div>New Book</div>
-            </div>
+            </buttonv>
         </div>
         <div class="main">
             <h2>Books</h2>
@@ -35,28 +35,24 @@
         </div>
 
     </div>
-    
-
-    <!-- <form action="">
-        <p>
-            <label for="">Title</label>
-            <input type="text" id="title">
-        </p>
-        <p>
-            <label for="">Author</label>
-            <input type="text" id="author">
-        </p>
-        <p>
-            <label for="">Page Count</label>
-            <input type="text" id="pages">
-        </p>
-        <p>
-            <label for="">I have read this book</label>
-            <input type="checkbox" id="readStatus">
-        </p>
-
-        <button>Submit</button>
-
-    </form> -->
+    <dialog>
+        <h2>Add a new book</h2>
+        <form action="">
+            <p>
+                <input type="text" id="title" placeholder="Title">
+            </p>
+            <p>
+                <input type="text" id="author" placeholder="Author">
+            </p>
+            <p>
+                <input type="text" id="pages" placeholder="pages">
+            </p>
+            <p>
+                <label for="">I have read this book</label>
+                <input class="checkbox" type="checkbox" id="readStatus">
+            </p>
+            <button>Submit</button>
+        </form>
+    </dialog>
 </body>
 </html>
