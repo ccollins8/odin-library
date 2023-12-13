@@ -80,6 +80,18 @@ myLibrary.forEach((book) => {
 
     const updateBtn = document.createElement('button')
     updateBtn.classList.add('updateBtn')
+    updateBtn.textContent = "Update Status"
+    card.appendChild(updateBtn)
+
+    updateBtn.addEventListener("click", () => {
+        if (book.readStatus == true) {
+            myLibrary[myLibrary.indexOf(book)].readStatus = false;
+            read.textContent = "Status: Not Read"
+        } else {
+            myLibrary[myLibrary.indexOf(book)].readStatus = true;
+            read.textContent = "Status: Read"
+        }
+    })
 
 
     const removeBtn = document.createElement('button')
@@ -118,7 +130,7 @@ displayLibrary();
 clearForm();
 });
 
-myLibrary.push(new Book("The Hobit", "J.K.K Tolkien", 295, true))
-myLibrary.push(new Book("Moby Dick", "Herman Marvelle", 400, true))
+myLibrary.push(new Book("The Hobit", "J.R.R Tolkien", 295, true))
+myLibrary.push(new Book("Moby Dick", "Herman Melville", 400, true))
 
 displayLibrary()

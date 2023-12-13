@@ -69,23 +69,40 @@ body, html {
     padding: 1rem;
     border-radius: 1rem;
     font-size: 1.5rem;
-    gap: 0.5rem;
+    gap: 1rem;
     font-weight: bold;
 }
 
 .main .card button {
-    background-color: #FF9C9C;
     width: 100%;
     border-radius: 1rem;
+    border: none;
     padding: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
+.main .card .updateBtn {
+    background-color: #9FFF9C ;
+}
+
+.main .card .updateBtn:hover {
+    background-color: #6aca67;
+}
+
 .main .card button:hover {
     cursor: pointer;
-    background-color: #ff9c9c96;
 }
+
+.main .card .removeBtn {
+    background-color: #efefef;
+}
+
+.main .card .removeBtn:hover {
+    background-color: hsla(0, 0%, 94%, 0.247);
+}
+
+
 
 dialog {
     background-color: #F0EEF1;
