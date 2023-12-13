@@ -29,6 +29,8 @@ const submitButton = document.querySelector('form button')
 
 const cards = document.querySelector('.cards')
 
+const removeBtn = document.querySelector('.removeBtn')
+
 
 function addBookToLibrary() {
     const book = new Book(title.value, author.value, pages.value, readStatus.checked)
@@ -42,8 +44,57 @@ function clearForm() {
     readStatus.checked = false;
 }
 
+function clearLibrary() {
+    const parent = document.querySelector('.cards')
+    while (parent.hasChildNodes()) {
+        parent.removeChild(parent.lastChild)
+    }
+}
+
 function displayLibrary() {
-    let card = document.createElement('.card');
+myLibrary.forEach((book) => {
+    const card = document.createElement('div');
+    card.classList.add('card')
+    cards.appendChild(card)
+
+    const title = document.createElement('div')
+    title.textContent = `Title: ${book.title}`
+    card.appendChild(title)
+
+    const author = document.createElement('div')
+    author.textContent = `Author: ${book.author}`
+    card.appendChild(author)
+
+    const pages = document.createElement('div')
+    pages.textContent = `Pages: ${book.pages}`
+    card.appendChild(pages)
+
+    const read = document.createElement('div')
+    if (book.readStatus == true) {
+        read.textContent = `Status: Read`
+
+    } else {
+        read.textContent = "Status: Not Read"
+    }
+    card.appendChild(read)
+
+    const updateBtn = document.createElement('button')
+    updateBtn.classList.add('updateBtn')
+
+
+    const removeBtn = document.createElement('button')
+    removeBtn.classList.add('removeBtn')
+    removeBtn.textContent = `Remove Book`
+    card.appendChild(removeBtn)
+
+    removeBtn.addEventListener("click", () => {
+        removeBtn.parentElement.remove()
+        myLibrary.splice(myLibrary.indexOf(book,1))
+    })
+
+    
+})
+
 
     
 }
@@ -58,10 +109,16 @@ submitButton.addEventListener("click", () => {
 
 
 
+
 form.addEventListener('submit', (e) => {
 e.preventDefault();
-addBookToLibrary()
-displayLibrary()
+addBookToLibrary();
+clearLibrary()
+displayLibrary();
 clearForm();
 });
 
+myLibrary.push(new Book("The Hobit", "J.K.K Tolkien", 295, true))
+myLibrary.push(new Book("Moby Dick", "Herman Marvelle", 400, true))
+
+displayLibrary()
