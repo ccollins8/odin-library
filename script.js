@@ -120,7 +120,7 @@ myLibrary.forEach((book) => {
 
     removeBtn.addEventListener("click", () => {
         removeBtn.parentElement.remove()
-        myLibrary.splice(myLibrary.indexOf(book,1))
+        myLibrary.splice(myLibrary.indexOf(book),1)
     })
 
     
