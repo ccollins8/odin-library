@@ -1,18 +1,37 @@
 const myLibrary = [];
 
-function Book(title, author, pages, readStatus) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.readStatus = readStatus;
+// function Book(title, author, pages, readStatus) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.readStatus = readStatus;
 
-    this.info = function() {
+//     this.info = function() {
+//         if (this.readStatus == true) {
+//             return `${this.title} by ${this.author}, ${this.pages} pages, already read`;
+//         } else {
+//             return `${this.title} by ${this.author}, ${this.pages} pages, not read yet`;
+//         }
+//     }
+// }
+
+class Book {
+    constructor(title, author, pages, readStatus) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages
+        this.readStatus = readStatus;
+    }
+
+    info() {
         if (this.readStatus == true) {
             return `${this.title} by ${this.author}, ${this.pages} pages, already read`;
         } else {
             return `${this.title} by ${this.author}, ${this.pages} pages, not read yet`;
         }
     }
+
+
 }
 
 const title = document.querySelector('#title')
